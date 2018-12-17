@@ -1,7 +1,4 @@
-// ====================================================
-// More Templates: https://www.ebenmonney.com/templates
-// Email: support@ebenmonney.com
-// ====================================================
+
 
 import { Directive, Input, Output, EventEmitter } from '@angular/core';
 

@@ -1,7 +1,4 @@
-﻿// ====================================================
-// More Templates: https://www.ebenmonney.com/templates
-// Email: support@ebenmonney.com
-// ====================================================
+﻿
 
 using AutoMapper;
 using DAL.Core;

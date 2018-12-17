@@ -1,7 +1,3 @@
-// ====================================================
-// More Templates: https://www.ebenmonney.com/templates
-// Email: support@ebenmonney.com
-// ====================================================
 
 import { NgModule, ErrorHandler } from "@angular/core";
 import { RouterModule } from "@angular/router";

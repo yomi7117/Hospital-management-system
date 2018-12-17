@@ -1,7 +1,4 @@
-// ====================================================
-// More Templates: https://www.ebenmonney.com/templates
-// Email: support@ebenmonney.com
-// ====================================================
+
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';

@@ -1,8 +1,4 @@
-﻿// ====================================================
-// More Templates: https://www.ebenmonney.com/templates
-// Email: support@ebenmonney.com
-// ====================================================
-
+﻿
 using DAL.Core;
 using Microsoft.AspNetCore.Authorization;
 using System;

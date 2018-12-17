@@ -1,8 +1,4 @@
-﻿// ====================================================
-// More Templates: https://www.ebenmonney.com/templates
-// Email: support@ebenmonney.com
-// ====================================================
-
+﻿
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;

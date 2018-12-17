@@ -1,7 +1,3 @@
-// ====================================================
-// More Templates: https://www.ebenmonney.com/templates
-// Email: support@ebenmonney.com
-// ====================================================
 
 export type PermissionNames =
     "View Users" | "Manage Users" |

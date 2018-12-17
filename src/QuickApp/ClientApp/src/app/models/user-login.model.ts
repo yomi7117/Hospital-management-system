@@ -1,7 +1,4 @@
-// ====================================================
-// More Templates: https://www.ebenmonney.com/templates
-// Email: support@ebenmonney.com
-// ====================================================
+
 
 export class UserLogin {
     constructor(email?: string, password?: string, rememberMe?: boolean) {

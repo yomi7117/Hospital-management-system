@@ -1,7 +1,4 @@
-// ====================================================
-// More Templates: https://www.ebenmonney.com/templates
-// Email: support@ebenmonney.com
-// ====================================================
+
 
 import { Directive, ElementRef, Output, EventEmitter, OnDestroy, NgZone } from '@angular/core';
 import { Observable, Subscription, fromEvent } from 'rxjs';

@@ -1,7 +1,3 @@
-// ====================================================
-// More Templates: https://www.ebenmonney.com/templates
-// Email: support@ebenmonney.com
-// ====================================================
 
 using System;
 using System.Collections.Generic;
