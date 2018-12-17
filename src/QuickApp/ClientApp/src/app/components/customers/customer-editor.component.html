@@ -1,0 +1,81 @@
+<div>
+  <form *ngIf="formResetToggle" class="form-horizontal" name="customerEditorForm" #f="ngForm" novalidate
+        (ngSubmit)="f.form.valid ? save() :
+          (!customerName.valid && showErrorAlert('Customer name is required', 'Please enter a customer name (minimum of 10 and maximum of 200 characters)'));
+          (!customerAddress.valid && showErrorAlert('Customer Address is required', 'Please enter a customer address (minimum of 10 and maximum of 200 characters)'));
+          (!customerCity.valid && showErrorAlert('Customer City is required', 'Please enter a customer city (minimum of 10 and maximum of 200 characters)'));
+        ">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="form-group has-feedback">
+          <label class="control-label col-md-2" for="customerName">{{'Name' | translate}}</label>
+          <div class="col-md-10" [ngClass]="{'has-success': f.submitted && customerName.valid, 'has-error' : f.submitted && !customerName.valid}">
+            <input [disabled]="!canManageRoles" type="text" id="customerName" name="customerName" placeholder="Enter customer name" class="form-control" [(ngModel)]="customerEdit.name" #customerName="ngModel" required minlength="2" maxlength="200" />
+            <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': customerName.valid, 'glyphicon-remove' : !customerName.valid}"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-8">
+        <div class="form-group">
+          <label class="control-label col-md-2" for="customerAddress">{{'Address' | translate}}</label>
+          <div class="col-md-10" [ngClass]="{'has-success': f.submitted && customerAddress.valid, 'has-error' : f.submitted && !customerAddress.valid}">
+            <input [disabled]="!canManageRoles" type="text" id="customerAddress" name="customerAddress" placeholder="Enter customer address" class="form-control" [(ngModel)]="customerEdit.address" #customerAddress="ngModel" required minlength="2" maxlength="200" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="edit-separator-hr" />
+      </div>
+    </div>
+
+    <!--<div class="row">
+    <div class="col-md-12">
+      <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+    </div>
+  </div>-->
+
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label class="control-label col-md-2" for="customerCity">{{'City' | translate}}</label>
+          <div class="col-md-10" [ngClass]="{'has-success': f.submitted && customerCity.valid, 'has-error' : f.submitted && !customerCity.valid}">
+            <input [disabled]="!canManageRoles" type="text" id="customerCity" name="customerCity" placeholder="Enter customer city" class="form-control" [(ngModel)]="customerEdit.city" #customerCity="ngModel" required minlength="2" maxlength="200" />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-8">
+        <div class="form-group">
+          <label class="control-label col-md-2" for="customerGender">{{'Gender' | translate}}</label>
+          <div class="col-md-10">
+            <input [disabled]="!canManageRoles" type="text" id="customerGender" name="customerGender" placeholder="Enter customer gender" class="form-control" [(ngModel)]="customerEdit.gender" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="edit-separator-hr" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-7">
+        <div ngPreserveWhitespaces class="pull-right">
+          <button *ngIf="!canManageRoles" type="button" (click)="cancel()" class="btn btn-default">{{'Close' | translate}}</button>
+          <button *ngIf="canManageRoles" type="button" (click)="cancel()" class="btn btn-danger" [disabled]="isSaving"><i class='fa fa-times'></i> {{'Cancel' | translate}}</button>
+          <button *ngIf="canManageRoles" type="submit" class="btn btn-primary" [disabled]="isSaving">
+            <i *ngIf="!isSaving" class='fa fa-save'></i><i *ngIf="isSaving" class='fa fa-circle-o-notch fa-spin'></i> {{isSaving ? ('Saving' | translate) : ('Save' | translate)}}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </form>
+</div>
